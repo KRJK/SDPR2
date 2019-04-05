@@ -1,0 +1,14 @@
+#logout{
+  height: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top:10px;
+  text-align: center;
+  background: #35424a;
+  color: #FFFFFF;
+}
+
+#logout h3{
+  margin: 0;
+  padding: 0;
+}

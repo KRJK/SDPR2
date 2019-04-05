@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Uitlenen | NOVI Kunst</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/uitlenen.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Font awesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1> Kunst lenen met <span class="highlight"> NOVI </span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#" class="current">uitlenen</a></li>
+          <li><a href="lenen.html">lenen</a></li>
+          <li><a href="uitloggen.html">logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="borrowDescription2">
+    <div class="container">
+      <h3>Leen je kunst uit</h3>
+      <!-- button triggers the modal -->
+      <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span class="fas fa-plus"></span></button>
+    </div>
+  </section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Voeg je kunstwerk toe</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+          <p>Voeg hier je kunstwerk toe, dan plaatsen wij hem online</p><br>
+          Naam van het kunstwerk: <input type="text" id="artName"><br><br>
+          Naam eigenaar: <input type="text" id="owner"><br><br>
+          Gewenste huurprijs per maand (ETH): <input type="text" id="pricePM"><br>
+          Periode <input type="" min="3" max="12" style="width:300px"><br><br>
+          Aantal maanden
+          <select name="months">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <!-- <input type="file" name="pic" accept="image/*" id="artFile"><br> -->
+          <!-- <input type="submit" class="btn btn-primary"> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="submitBtn" onclick="submitArtInfo()" data-dismiss="modal">Post kunstwerk</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p> Novi opleidingen, Copyright &copy; 2019</p>
+  </footer>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDvjVEqPPSOICaX9x1RcRlwLOJlIQKHKa0",
+    authDomain: "novikunst.firebaseapp.com",
+    databaseURL: "https://novikunst.firebaseio.com",
+    projectId: "novikunst",
+    storageBucket: "novikunst.appspot.com",
+    messagingSenderId: "1069566195828"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+<script src="./js/index.js"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

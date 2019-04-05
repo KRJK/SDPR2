@@ -1,0 +1,19 @@
+section.loginForm{
+  background-color: #35424a;
+  text-align: center;
+  width: 50%;
+  border-radius: 50px;
+  color: #FFFFFF;
+  margin: auto;
+}
+
+.loginHeadLine{
+  margin: 10% 0 0 0;
+  margin-top: 10%;
+  padding: 5% 0 5% 0;
+  color: #4074c9;
+}
+
+form input{
+  color: black;
+}

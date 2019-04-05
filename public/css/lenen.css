@@ -1,0 +1,29 @@
+
+
+section.borrowDescription{
+  margin-top: 0;
+  min-height:400px;
+  background:url('../images/blueArt3.jpg') no-repeat 0 -400px;
+  text-align:center;
+  color:#ffffff;
+}
+
+section.borrowDescription h3{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+section.borrowDescription button{
+  margin-top: 60px;
+  font-size:20px;
+}
+
+.hireButton{
+  margin-left: 100px;
+}
+
+.information{
+  /* border: solid black 1px; */
+  margin: 100px 100px 0 0;
+}
