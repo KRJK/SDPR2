@@ -59,20 +59,23 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Voeg je kunstwerk toe</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h4 class="modal-title" id="exampleModalLabel">betaal je kunstwerk</h4>
+          <h5 class="modal-title" id="exampleModalLabel">Kies je eigen prijs</h5>
         </div>
         <div class="modal-body">
-          <form action="#">
-          <p>Als u dit kunstwerk wilt huren betaald u barkie NLG</p><br>
+            <form action="/postTransaction" method="POST">
+              <table>
+                  <tr><td>Naam: </td><td><input type="text" name="username" /></td></tr>
+                  <tr><td>Totaal bedrag bitcoin:</td><td><input type="number" name="amount" id="btc-amount" readonly/></td></tr>
+                  <tr><td>Totaal bedrag euro:</td><td><input type="number" name="amount" id="eur-amount"/></td></tr>
+                  <tr><td>Geef uw bitcoin wallet addres:</td><td><input type="text" name="payAddr"></td></tr>
+              </table>
+              <br>
+              <button class="btn btn-primary">betalen</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" id="submitBtn" onclick="">Betalen</button>
-        </div>
+
       </div>
     </div>
   </div>
@@ -81,7 +84,6 @@
   <footer>
     <p> Novi opleidingen, Copyright &copy; 2019</p>
   </footer>
-
 
   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
   <script>

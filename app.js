@@ -13,12 +13,13 @@ const urlencodedParser = bodyParser.urlencoded({
 });
 
 app.get('/', (req, res) => res.send('Hello World!'));
-app.post('/submitTransaction', urlencodedParser, function (req, res) {
+app.post('/postTransaction', urlencodedParser, function (req, res) {
     if (!req.body) {
         return res.sendStatus(400);
     }
     res.writeHead(200);
     console.dir(req.body);
+    res.write("congratulations, the transaction was succesful!")
     return res.end();
 });
 
