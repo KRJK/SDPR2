@@ -12,7 +12,7 @@ const urlencodedParser = bodyParser.urlencoded({
     extended: true
 });
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/public/home.html'));
 app.post('/postTransaction', urlencodedParser, function (req, res) {
     if (!req.body) {
         return res.sendStatus(400);
